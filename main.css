@@ -1,0 +1,334 @@
+/* CSS Reset and Base Styles */
+* { /* Universal selector targeting all elements */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Include padding and border in element's total width/height */
+}
+
+body { /* Styling for the body element */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font stack for text */
+    line-height: 1.6; /* Line height for better readability */
+    color: #333; /* Default text color */
+    background-color: #f4f4f4; /* Background color for entire page */
+    padding: 20px; /* Padding around the body content */
+}
+
+.container { /* Main container styling */
+    max-width: 1200px; /* Maximum width of container */
+    margin: 0 auto; /* Center the container horizontally */
+    background: white; /* White background for content area */
+    padding: 30px; /* Internal padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0,0,0,0.1); /* Drop shadow effect */
+}
+
+/* Typography Styles */
+h1 { /* Main heading styling */
+    color: #333; /* Dark blue-gray color */
+    text-align: center; /* Center align the text */
+    margin-bottom: 30px; /* Space below heading */
+    font-size: 2.5em; /* Large font size */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* Subtle text shadow */
+}
+
+h2 { /* Secondary heading styling */
+    color: #333; /* Slightly lighter blue-gray */
+    border-bottom: 3px solid #3498db; /* Blue underline border */
+    padding-bottom: 10px; /* Space between text and border */
+    margin: 40px 0 20px 0; /* Margins: top, right, bottom, left */
+    font-size: 1.8em; /* Font size for h2 */
+}
+
+h3 { /* Tertiary heading styling */
+    color: #333; /* Blue color */
+    margin: 25px 0 15px 0; /* Vertical margins */
+    font-size: 1.4em; /* Font size for h3 */
+}
+
+h4, h5, h6 { /* Minor headings styling */
+    color: #333; /* Gray color */
+    margin: 20px 0 10px 0; /* Vertical margins */
+}
+
+p { /* Paragraph styling */
+    margin-bottom: 15px; /* Space below paragraphs */
+    text-align: justify; /* Justify text alignment */
+}
+
+/* Text Formatting Styles */
+.bold { /* Bold text class */
+    font-weight: bold; /* Make text bold */
+}
+
+.italic { /* Italic text class */
+    font-style: italic; /* Make text italic */
+}
+
+.underline { /* Underlined text class */
+    text-decoration: underline; /* Add underline */
+}
+
+.highlight { /* Highlighted text class */
+    background-color: #fff3cd; /* Light yellow background */
+    padding: 2px 4px; /* Small padding around text */
+    border-radius: 3px; /* Rounded corners */
+}
+
+/* Link Styles */
+a { /* Anchor tag styling */
+    color: #3498db; /* Blue color for links */
+    text-decoration: none; /* Remove default underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+a:hover { /* Link hover effect */
+    color: #2980b9; /* Darker blue on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+a:visited { /* Visited link styling */
+    color: #8e44ad; /* Purple color for visited links */
+}
+
+/* List Styles */
+ul, ol { /* Unordered and ordered list styling */
+    margin: 20px 0; /* Vertical margins */
+    padding-left: 30px; /* Left padding for list items */
+}
+
+li { /* List item styling */
+    margin-bottom: 8px; /* Space between list items */
+}
+
+ul.custom-list { /* Custom styled unordered list */
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 0; /* Remove left padding */
+}
+
+ul.custom-list li { /* Custom list items */
+    position: relative; /* Relative positioning for custom bullets */
+    padding-left: 25px; /* Left padding for custom bullet */
+    margin-bottom: 10px; /* Space between items */
+}
+
+ul.custom-list li::before { /* Custom bullet pseudo-element */
+    content: "→"; /* Arrow character as bullet */
+    position: absolute; /* Absolute positioning */
+    left: 0; /* Position at left edge */
+    color: #3498db; /* Blue color for bullet */
+    font-weight: bold; /* Bold bullet */
+}
+
+/* Table Styles */
+table { /* Table styling */
+    width: 100%; /* Full width table */
+    border-collapse: collapse; /* Collapse table borders */
+    margin: 20px 0; /* Vertical margins */
+    background: white; /* White background */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+th { /* Table header styling */
+    background-color: #3498db; /* Blue background */
+    color: white; /* White text */
+    padding: 12px; /* Padding inside cells */
+    text-align: left; /* Left align text */
+    font-weight: bold; /* Bold text */
+}
+
+td { /* Table data cell styling */
+    padding: 12px; /* Padding inside cells */
+    border-bottom: 1px solid #ddd; /* Bottom border */
+}
+
+tr:nth-child(even) { /* Even row styling */
+    background-color: #f8f9fa; /* Light gray background */
+}
+
+tr:hover { /* Row hover effect */
+    background-color: #e3f2fd; /* Light blue on hover */
+}
+
+/* Form Styles */
+form { /* Form container styling */
+    background: #f8f9fa; /* Light background */
+    padding: 20px; /* Internal padding */
+    border-radius: 8px; /* Rounded corners */
+    margin: 20px 0; /* Vertical margins */
+}
+
+label { /* Form label styling */
+    display: block; /* Block display */
+    margin-bottom: 5px; /* Space below labels */
+    font-weight: bold; /* Bold text */
+    color: #2c3e50; /* Dark color */
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea, select { /* Input styling */
+    width: 100%; /* Full width */
+    padding: 10px; /* Internal padding */
+    border: 2px solid #ddd; /* Border */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 15px; /* Space below inputs */
+    font-size: 16px; /* Font size */
+    transition: border-color 0.3s ease; /* Smooth border transition */
+}
+
+input:focus, textarea:focus, select:focus { /* Focus state styling */
+    outline: none; /* Remove default outline */
+    border-color: #3498db; /* Blue border on focus */
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3); /* Blue glow effect */
+}
+
+button { /* Button styling */
+    background-color: #3498db; /* Blue background */
+    color: white; /* White text */
+    padding: 12px 25px; /* Padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+button:hover { /* Button hover effect */
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Image Styles */
+.img-container { /* Image container */
+    text-align: center; /* Center align images */
+    margin: 20px 0; /* Vertical margins */
+}
+
+.responsive-img { /* Responsive image class */
+    max-width: 100%; /* Maximum width */
+    height: auto; /* Auto height to maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow effect */
+}
+
+/* Semantic Elements */
+header { /* Header element styling */
+    background: darkblue; /* Gradient background */
+    color: white; /* White text */
+    padding: 30px; /* Internal padding */
+    text-align: center; /* Center align content */
+    margin-bottom: 30px; /* Space below header */
+    border-radius: 8px; /* Rounded corners */
+}
+
+nav { /* Navigation styling */
+    background-color: #2c3e50; /* Dark background */
+    padding: 15px; /* Internal padding */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below nav */
+}
+
+nav ul { /* Navigation list styling */
+    list-style: none; /* Remove list bullets */
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center items horizontally */
+    margin: 0; /* Remove margins */
+    padding: 0; /* Remove padding */
+}
+
+nav li { /* Navigation list items */
+    margin: 0 15px; /* Horizontal margins */
+}
+
+nav a { /* Navigation links */
+    color: white; /* White text */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+    padding: 10px 15px; /* Padding around links */
+    border-radius: 3px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+nav a:hover { /* Navigation link hover */
+    background-color: rgba(255,255,255,0.2); /* Semi-transparent white background */
+}
+
+article { /* Article element styling */
+    background: white; /* White background */
+    padding: 25px; /* Internal padding */
+    margin: 20px 0; /* Vertical margins */
+    border-left: 4px solid #3498db; /* Blue left border */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Shadow effect */
+}
+
+aside { /* Aside element styling */
+    background: #ecf0f1; /* Light gray background */
+    padding: 20px; /* Internal padding */
+    border-radius: 8px; /* Rounded corners */
+    margin: 20px 0; /* Vertical margins */
+    border-left: 4px solid #e74c3c; /* Red left border */
+}
+
+footer { /* Footer element styling */
+    background-color: #2c3e50; /* Dark background */
+    color: white; /* White text */
+    text-align: center; /* Center align text */
+    padding: 25px; /* Internal padding */
+    margin-top: 40px; /* Space above footer */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Media Styles */
+.media-section { /* Media section container */
+    background: #f8f9fa; /* Light background */
+    padding: 20px; /* Internal padding */
+    border-radius: 8px; /* Rounded corners */
+    margin: 20px 0; /* Vertical margins */
+}
+
+video { /* Video element styling */
+    width: 100%; /* Full width */
+    max-width: 600px; /* Maximum width */
+    height: auto; /* Auto height */
+    border-radius: 8px; /* Rounded corners */
+}
+
+audio { /* Audio element styling */
+    width: 100%; /* Full width */
+    margin: 10px 0; /* Vertical margins */
+}
+
+/* Utility Classes */
+.text-center { /* Center text utility */
+    text-align: center; /* Center align text */
+}
+
+.text-right { /* Right align text utility */
+    text-align: right; /* Right align text */
+}
+
+.margin-top { /* Top margin utility */
+    margin-top: 30px; /* Add top margin */
+}
+
+.padding { /* Padding utility */
+    padding: 20px; /* Add padding */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) { /* Mobile responsive styles */
+    .container { /* Container on mobile */
+        padding: 15px; /* Reduced padding */
+        margin: 10px; /* Smaller margins */
+    }
+    
+    h1 { /* H1 on mobile */
+        font-size: 2em; /* Smaller font size */
+    }
+    
+    nav ul { /* Navigation on mobile */
+        flex-direction: column; /* Vertical layout */
+        align-items: center; /* Center items */
+    }
+    
+    nav li { /* Navigation items on mobile */
+        margin: 5px 0; /* Vertical margins */
+    }
+}
